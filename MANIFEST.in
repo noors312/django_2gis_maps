@@ -4,5 +4,5 @@ include CHANGELOG.md
 include MANIFEST.in
 include requirements/*.txt
 
-recursive-include django_google_maps/static *
-recursive-include django_google_maps/templates *
+recursive-include django_2gis_maps/static *
+recursive-include django_2gis_maps/templates *
