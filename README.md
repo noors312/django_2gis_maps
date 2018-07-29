@@ -16,7 +16,7 @@ update.
 
 ### Status
 INSTALLATION
-- pip install git+https://github.com/jkbr/httpie.git
+- `pip install git+https://github.com/jkbr/httpie.git`
 USAGE:
 ------
 - include the `django_2gis_maps` app in your `settings.py`
