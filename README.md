@@ -15,8 +15,10 @@ drag the marker to the correct spot and the geo coordinates will
 update.
 
 ### Status
+-----
 INSTALLATION
-- `pip install git+https://github.com/jkbr/httpie.git`
+-----
+- `pip install git+https://github.com/NursErgesh/django_2gis_maps.git`
 ------
 USAGE:
 ------
