@@ -2,8 +2,8 @@
 import os
 from setuptools import setup
 
-README = os.path.join(os.path.dirname(__file__), 'README.md')
-LONG_DESCRIPTION = open(README, 'r').read()
+# README = os.path.join(os.path.dirname(__file__), 'README.md')
+# LONG_DESCRIPTION = open(README, 'r').read()
 CLASSIFIERS = [
     "Development Status :: 4 - Beta",
     "Environment :: Web Environment",
@@ -23,13 +23,13 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name="django-google-maps",
-    version='0.10.1',
-    author="Aaron Madison",
-    author_email="aaron.l.madison@gmail.com",
-    description="Plugs google maps V3 api into Django admin.",
-    long_description=LONG_DESCRIPTION,
-    url="https://github.com/madisona/django-google-maps",
+    name="django-2gis-maps",
+    version='0.0.4',
+    author="Noors Ergesh",
+    author_email="jackmovies01@gmail.com",
+    description="Plugs 2gis maps for Django admin",
+    # long_description=LONG_DESCRIPTION,
+    url="https://github.com/NursErgesh/django-2gis-maps.git",
     packages=("django_2gis_maps",),
     include_package_data=True,
     install_requires=open('requirements/requirements.txt').read().splitlines(),

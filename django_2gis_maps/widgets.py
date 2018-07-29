@@ -2,7 +2,7 @@ from django.conf import settings
 from django.forms import widgets
 
 
-class GoogleMapsAddressWidget(widgets.TextInput):
+class DoubleGisMapsAddressWidget(widgets.TextInput):
     """a widget that will place a google map right after the #id_address field"""
     template_name = "django_google_maps/widgets/map_widget.html"
 
