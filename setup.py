@@ -5,7 +5,7 @@ from setuptools import setup
 # README = os.path.join(os.path.dirname(__file__), 'README.md')
 # LONG_DESCRIPTION = open(README, 'r').read()
 CLASSIFIERS = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 1 - Beta",
     "Environment :: Web Environment",
     "Framework :: Django",
     "Framework :: Django",
@@ -23,13 +23,13 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name="django-2gis-maps",
-    version='0.0.4',
+    name="django_2gis_maps",
+    version='0.0.1',
     author="Noors Ergesh",
     author_email="jackmovies01@gmail.com",
     description="Plugs 2gis maps for Django admin",
     # long_description=LONG_DESCRIPTION,
-    url="https://github.com/NursErgesh/django-2gis-maps.git",
+    url="https://github.com/NursErgesh/django_2gis_maps.git",
     packages=("django_2gis_maps",),
     include_package_data=True,
     install_requires=open('requirements/requirements.txt').read().splitlines(),

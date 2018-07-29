@@ -1,10 +1,10 @@
 ### <In English>
 
-`django-2gis-maps` is a simple application that provides the basic
+`django_2gis_maps` is a simple application that provides the basic
 hooks into google maps V3 api for use in Django models from Django
 version 1.11+.  
 
-Starting with `django-2gis-maps` version (0.7.0), Django 1.11+ is
+Starting with `django_2gis_maps` version (0.7.0), Django 1.11+ is
 required because Django changed their widget template rendering system. 
 Version 0.8.0 supports Django 2.0+, and as such removes support for Python 2.7
 
@@ -15,6 +15,8 @@ drag the marker to the correct spot and the geo coordinates will
 update.
 
 ### Status
+INSTALLATION
+- pip install git+https://github.com/jkbr/httpie.git
 USAGE:
 ------
 - include the `django_2gis_maps` app in your `settings.py`
