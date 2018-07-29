@@ -24,7 +24,7 @@ CLASSIFIERS = [
 
 setup(
     name="django_2gis_maps",
-    version='0.0.1',
+    version='0.0.2',
     author="Noors Ergesh",
     author_email="jackmovies01@gmail.com",
     description="Plugs 2gis maps for Django admin",

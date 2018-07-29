@@ -146,5 +146,3 @@ LOGGING = {
         },
     }
 }
-
-GOOGLE_MAPS_API_KEY = 'SAMPLE_KEY'

@@ -38,13 +38,10 @@ USAGE:
 
   ```python
   from django.contrib import admin
-  from django_2gis_maps import widgets as map_widgets
-  from django_2gis_maps import fields as map_fields
+  from django_2gis_maps.admin import DoubleGisAdmin
 
-  class RentalAdmin(admin.ModelAdmin):
-      formfield_overrides = {
-          map_fields.AddressField: {'widget': map_widgets.GoogleMapsAddressWidget},
-      }
+  class RentalAdmin(DoubleGisAdmin):
+      pass
   ```
 
 That should be all you need to get started.
