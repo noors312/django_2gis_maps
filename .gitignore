@@ -1,0 +1,10 @@
+.idea/*
+sample_db
+build/*
+*.egg-info
+dist
+.coverage
+venv/
+*.pyc
+*.pyo
+.tox/*
