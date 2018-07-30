@@ -28,7 +28,7 @@ DG.then(function () {
     // map.locate({setView: true, enableHighAccuracy: true});
     // console.log(map.locate({setView: true, enableHighAccuracy: true, maxZoom: 15}));
     map.on('click', function (e) {
-        // console.log(map);
+        console.log(e);
         if (!marker) {
             marker = DG.marker([e.latlng.lat, e.latlng.lng]).addTo(map)
         }
