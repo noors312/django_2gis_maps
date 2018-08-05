@@ -33,19 +33,20 @@ USAGE:
 
   class Rental(models.Model):
       address = map_fields.AddressField(max_length=200)
-      geolocation = map_fields.GeoLocationField(max_length=100)
+      geolocation = map_fields.GeoLocationField()
   ```
 
 - in the `admin.py` include the following as a formfield_override
 
   ```python
   from django.contrib import admin
-  from django_2gis_maps.admin import DoubleGisAdmin
+  from django_2gis_maps.mixins import DoubleGisAdminMixin
 
-  class RentalAdmin(DoubleGisAdmin):
-      pass
+  class RentalAdmin(DoubleGisAdminMixin,admin.ModelAdmin):
+      multiple_markers = False        # Here is your option
   ```
-
+- in template include `{% load doublgis  %}` and use `{% render_map instanse.get_location %}` wherever you need
+---
 That should be all you need to get started.
 
 I also like to make the geolocation field readonly in the admin so a user

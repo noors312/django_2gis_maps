@@ -9,10 +9,27 @@ class DoubleGisMapsAddressWidget(widgets.TextInput):
     class Media:
         css = {
             'all': (settings.STATIC_URL +
-                    'django_2gis_maps/css/2gis-maps-admin.css',)
+                    'django_2gis_maps/css/adminMap.css',)
         }
         js = (
-            'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js',
+            'http://code.jquery.com/jquery-latest.min.js',
             'https://maps.api.2gis.ru/2.0/loader.js?pkg=full&skin=dark',
-            settings.STATIC_URL + 'django_2gis_maps/js/2gis-maps-admin.js',
+            settings.STATIC_URL + 'django_2gis_maps/js/addMarkers.js',
+            settings.STATIC_URL + 'django_2gis_maps/js/adminMap.js',
+        )
+
+
+class DoubleGisMapsMultipleMarkersWidget(widgets.TextInput):
+    template_name = "django_2gis_maps/widgets/multiple_markers_widget.html"
+
+    class Media:
+        css = {
+            'all': (settings.STATIC_URL +
+                    'django_2gis_maps/css/adminMapMultipleMarkers.css',)
+        }
+        js = (
+            'http://code.jquery.com/jquery-latest.min.js',
+            'https://maps.api.2gis.ru/2.0/loader.js?pkg=full&skin=dark',
+            settings.STATIC_URL + 'django_2gis_maps/js/addMarkers.js',
+            settings.STATIC_URL + 'django_2gis_maps/js/adminMapMultipleMarkers.js',
         )

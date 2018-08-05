@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.forms import TextInput
 
 from django_2gis_maps.fields import AddressField, GeoLocationField
-from django_2gis_maps.widgets import DoubleGisMapsAddressWidget
+from django_2gis_maps.widgets import *
 
 
 class DoubleGisAdmin(admin.ModelAdmin):
@@ -16,3 +16,8 @@ class DoubleGisAdmin(admin.ModelAdmin):
             })
         },
     }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.multiple_markers:
+            self.formfield_overrides[AddressField]['widget'] = DoubleGisMapsMultipleMarkersWidget

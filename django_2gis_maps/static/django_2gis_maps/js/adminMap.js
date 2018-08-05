@@ -19,27 +19,40 @@ This script expects:
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 */
+
+
 DG.then(function () {
+    var marker;
+    var geolocationInput = $('#id_geolocation');
     map = DG.map('map', {
         'center': [42.882004, 74.582748],
         'zoom': 14
     });
-    var marker;
-    // map.locate({setView: true, enableHighAccuracy: true});
-    // console.log(map.locate({setView: true, enableHighAccuracy: true, maxZoom: 15}));
+    prepareMap();
     map.on('click', function (e) {
-        console.log(e);
         if (!marker) {
-            marker = DG.marker([e.latlng.lat, e.latlng.lng]).addTo(map)
+            marker = DG.marker([e.latlng.lat, e.latlng.lng], {
+                'draggable': true
+            }).addTo(map);
+
+            geolocationInput.val(e.latlng.lat + ',' + e.latlng.lng);
+
         }
         else {
             marker.setLatLng([e.latlng.lat, e.latlng.lng]);
+            geolocationInput.val(e.latlng.lat + ',' + e.latlng.lng);
         }
-        // console.log(marker.getLatLng())
-        $('#id_geolocation').val(marker.getLatLng().lat.toString() + ',' + marker.getLatLng().lng.toString())
+        marker.on('dragend', function (data) {
+            geolocationInput.val(data.target._latlng.lat + ',' + data.target._latlng.lng);
+        });
     });
-});
-$(document).ready(function () {
-    // var googlemap = googleMapAdmin();
-    // googlemap.initialize();
+
+    function prepareMap() {
+        if (geolocationInput.val()) {
+            console.log();
+            marker = DG.marker(geolocationInput.val().split(','), {'draggable': true}).addTo(map);
+            return true;
+        }
+        return false;
+    }
 });

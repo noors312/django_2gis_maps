@@ -8,10 +8,11 @@ if django.get_version() >= '2.0.0':
     from django.urls import include
 else:
     from django.conf.urls import url, include
-from sample.views import SampleFormView
+from sample.views import *
 
 urlpatterns = [
     # url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', SampleFormView.as_view()),
+    url(r'^$', SampleDetailView.as_view()),
+    # url(r'^$', SampleFormView.as_view()),
 ]
