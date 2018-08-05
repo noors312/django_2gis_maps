@@ -40,9 +40,9 @@ USAGE:
 
   ```python
   from django.contrib import admin
-  from django_2gis_maps.mixins import DoubleGisAdminMixin
+  from django_2gis_maps.admin import DoubleGisAdmin
 
-  class RentalAdmin(DoubleGisAdminMixin,admin.ModelAdmin):
+  class RentalAdmin(DoubleGisAdmin):
       multiple_markers = False        # Here is your option
   ```
 - in template include `{% load doublegis  %}` and use `{% render_map instanse.get_location %}` wherever you need
