@@ -6,3 +6,4 @@ include requirements/*.txt
 
 recursive-include django_2gis_maps/static *
 recursive-include django_2gis_maps/templates *
+recursive-include django_2gis_maps/templatetags *

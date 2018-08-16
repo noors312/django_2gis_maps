@@ -19,5 +19,9 @@ class DoubleGisAdmin(admin.ModelAdmin):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        if self.multiple_markers:
-            self.formfield_overrides[AddressField]['widget'] = DoubleGisMapsMultipleMarkersWidget
+        try:
+            if self.multiple_markers:
+                self.formfield_overrides[AddressField]['widget'] = DoubleGisMapsMultipleMarkersWidget
+        except:
+            raise
+            # raise ("You missed multiple_markers ")
