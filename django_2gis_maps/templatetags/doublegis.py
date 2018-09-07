@@ -12,9 +12,10 @@ register = template.Library()
 
 
 @register.inclusion_tag("django_2gis_maps/map/map.html")
-def render_map(geolocation, **kwargs):
+def render_map(instance, **kwargs):
     context = {
-        'geolocation': geolocation
+        'instance': instance,
+        'geolocation': instance.get_location,
     }
     # return
     if kwargs:

@@ -6,7 +6,7 @@ from sample import models
 
 class SampleModelAdmin(DoubleGisAdmin):
     pass
-    # multiple_markers = False
+    # multiple_markers = True
 
 
 admin.site.register(models.SampleModel, SampleModelAdmin)

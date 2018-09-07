@@ -2,13 +2,14 @@
 <div class="map_canvas_wrapper">
     <div id="map" style="width: {{ width }}; height: {{ height }};" data-zoom="{{ zoom }}"
          data-lat="{% for item in geolocation %}{{ item.lat }};{% endfor %}"
-         data-lng="{% for item in geolocation %}{{ item.lng }};{% endfor %}"></div>
+         data-lng="{% for item in geolocation %}{{ item.lng }};{% endfor %}" data-popup="{{ popup }}"></div>
 </div>
 <script>
     DG.then(function () {
         var lat = $('#map').attr('data-lat').split(';');
         var lng = $('#map').attr('data-lng').split(';');
         var zoom = $('#map').attr('data-zoom');
+        var popup = $('#map').attr('data-popup');
         var markers = DG.featureGroup();
         var map = DG.map('map', {
             center: [lat[0], lng[0]],
@@ -16,7 +17,8 @@
         });
         for (var i = 0; i < lat.length; i++) {
             if (lat[i] !== '') {
-                DG.marker([lat[i], lng[i]]).addTo(markers);
+                var marker = DG.marker([lat[i], lng[i]]).addTo(markers);
+                popup ? marker.bindPopup('<h4 style="max-width: 95%;margin:auto;">{{ instance.address }}</h4>').openPopup() : null;
             }
         }
         markers.addTo(map);
