@@ -30,8 +30,8 @@ USAGE:
   ```python
   from django.db import models
   from django_2gis_maps import fields as map_fields
-
-  class Rental(models.Model):
+  from django_2gis_maps.mixins import DoubleGisMixin
+  class Rental(DoubleGisMixin,models.Model):
       address = map_fields.AddressField(max_length=200)
       geolocation = map_fields.GeoLocationField()
   ```

@@ -49,7 +49,6 @@ DG.then(function () {
 
     function prepareMap() {
         if (geolocationInput.val()) {
-            console.log();
             marker = DG.marker(geolocationInput.val().split(','), {'draggable': true}).addTo(map);
             return true;
         }
