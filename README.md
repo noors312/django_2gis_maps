@@ -1,4 +1,5 @@
 ### <In English>
+# Django 2GIS maps
 
 `django_2gis_maps` is a simple application that provides the basic
 hooks into django_2gis_maps V2 api for use in Django models from Django
