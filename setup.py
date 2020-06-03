@@ -1,8 +1,8 @@
 import os
 from setuptools import setup
 
-# README = os.path.join(os.path.dirname(__file__), 'README.md')
-# LONG_DESCRIPTION = open(README, 'r').read()
+README = os.path.join(os.path.dirname(__file__), 'README.md')
+LONG_DESCRIPTION = open(README, 'r').read()
 CLASSIFIERS = [
     "Development Status :: 4 - Beta",
     "Environment :: Web Environment",
@@ -23,11 +23,12 @@ CLASSIFIERS = [
 
 setup(
     name="django_2gis_maps",
-    version='1.0.2',
+    version='1.0.3',
     author="Noors Ergesh",
     author_email="jackmovies01@gmail.com",
     description="Plugs 2gis maps for Django admin",
-    # long_description=LONG_DESCRIPTION,
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type="text/markdown",
     url="https://github.com/NursErgesh/django_2gis_maps.git",
     packages=("django_2gis_maps",),
     include_package_data=True,
