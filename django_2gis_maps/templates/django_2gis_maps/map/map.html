@@ -1,6 +1,6 @@
 <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full{% if skin %}&skin={{ skin }}{% endif %}"></script>
-<div class="map_canvas_wrapper" style="height: 100%;width: 100%;">
-    <div id="map" style="width: {{ width }}; height: {{ height }};" data-zoom="{{ zoom }}"
+<div class="map_canvas_wrapper" style="width: {{ width }}; height: {{ height }};">
+    <div id="map" style="width: 100%;height: 100%;" data-zoom="{{ zoom }}"
          data-lat="{% for item in geolocation %}{{ item.lat }};{% endfor %}"
          data-lng="{% for item in geolocation %}{{ item.lng }};{% endfor %}" data-popup="{{ popup }}"></div>
 </div>

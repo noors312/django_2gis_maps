@@ -18,7 +18,7 @@
 
 from django.core import exceptions
 from django.db import models
-from django.utils.encoding import force_text, python_2_unicode_compatible
+from django.utils.encoding import force_text
 
 __all__ = ('AddressField', 'GeoLocationField')
 
@@ -32,7 +32,6 @@ def typename(obj):
         return type(obj).__name__
 
 
-@python_2_unicode_compatible
 class GeoPt(object):
     """A geographical point."""
 
@@ -108,25 +107,3 @@ class GeoLocationField(models.TextField):
     ranges [-90, 90] and [-180, 180], respectively.
     """
     description = "A geographical point, specified by floating-point latitude and longitude coordinates."
-
-    # def __init__(self, *args, **kwargs):
-    #     kwargs['max_length'] = 100
-    #     super(GeoLocationField, self).__init__(*args, **kwargs)
-
-    # def from_db_value(self, value, expression, connection, context):
-    #     return self.to_python(value)
-    #
-    # def to_python(self, value):
-    #     if isinstance(value, GeoPt):
-    #         return value
-    #     return GeoPt(value)
-    #
-    # def get_prep_value(self, value):
-    #     """prepare the value for database query"""
-    #     if value is None:
-    #         return None
-    #     return force_text(self.to_python(value))
-    #
-    # def value_to_string(self, obj):
-    #     value = self.value_from_object(obj)
-    #     return self.get_prep_value(value)
