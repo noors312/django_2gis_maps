@@ -46,7 +46,6 @@ USAGE:
       multiple_markers = False        # Here is your option
   ```
 - in template include `{% load doublegis  %}` and use `{% render_map instanse %}` wherever you need
----
 That should be all you need to get started.
 
 I also like to make the geolocation field readonly in the admin so a user
