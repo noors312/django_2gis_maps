@@ -19,7 +19,7 @@ update.
 -----
 INSTALLATION
 -----
-- `pip install git+https://github.com/NursErgesh/django_2gis_maps.git`
+- `pip install git+https://github.com/noors312/django_2gis_maps.git`
 - `pip install django_2gis_maps`
 ------
 USAGE:
