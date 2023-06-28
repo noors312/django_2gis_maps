@@ -19,6 +19,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.6",
     "Topic :: Software Development",
     "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "kajshdkajshdjasd"
 ]
 
 setup(
