@@ -18,7 +18,7 @@
 
 from django.core import exceptions
 from django.db import models
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 
 __all__ = ('AddressField', 'GeoLocationField')
 
