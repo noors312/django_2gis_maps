@@ -10,6 +10,8 @@ CLASSIFIERS = [
     "Framework :: Django",
     "Framework :: Django :: 1.11",
     "Framework :: Django :: 2.0",
+    "Framework :: Django :: 3.0",
+    "Framework :: Django :: 4.0",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
@@ -17,13 +19,14 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.4",
     "Programming Language :: Python :: 3.5",
     "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.10",
     "Topic :: Software Development",
     "Topic :: Software Development :: Libraries :: Application Frameworks",
 ]
 
 setup(
     name="django_2gis_maps",
-    version='1.0.3',
+    version='1.0.4',
     author="Noors Ergesh",
     author_email="jackmovies01@gmail.com",
     description="Plugs 2gis maps for Django admin",
